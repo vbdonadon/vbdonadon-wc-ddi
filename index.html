@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="./src/index.css" />
+
+    <title>Vite + Lit + TS</title>
+
+    <!-- Components -->
+    <script type="module" src="/src/components/g-ddi-modal/index.ts"></script>
+    <!-- 
+    <script>
+      // Implementação via LandingPages
+      window.addEventListener("DOMContentLoaded", function (event) {
+        // Necessário validar se funciona o essa seleção de classe em LP
+        const ddiModal = document.querySelector("g-ddi-modal");
+        ddiModal.buttonStyles =
+          "position: absolute; top: calc(50% - 1px); transform: translateY(-50%); left: 4px";
+        const allInputTypeTel = document.querySelectorAll('input[type="tel"]');
+
+        allInputTypeTel.forEach((input) => {
+          const divElement = document.createElement("div");
+          const divElementClass = divElement.classList.add("tel-wrapper");
+
+          divElement.style.position = "relative";
+
+          input.insertAdjacentElement("beforebegin", divElement);
+          divElement.insertAdjacentElement("beforeend", ddiModal);
+          divElement.insertAdjacentElement("afterbegin", input);
+        });
+
+        console.log("DOM fully loaded.");
+      });
+    </script> -->
+  </head>
+  <body>
+    <input type="tel" placeholder="Digite seu número" />
+    <g-ddi-modal></g-ddi-modal>
+
+    <script type="module">
+      import "/src/components/g-ddi-modal/";
+
+      console.log(document.querySelector("button"));
+    </script>
+
+    <style>
+      input[type="tel"] {
+        background: transparent;
+        font-family: Outfit, sans-serif, Arial, Helvetica;
+        font-size: 16px;
+        line-height: 125%;
+        font-weight: 300;
+        padding: 6px 8px 6px 55px;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #424040;
+        color: #000;
+      }
+
+      body {
+        background-color: white;
+      }
+    </style>
+  </body>
+</html>

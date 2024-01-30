@@ -1,8 +1,10 @@
 {
   "name": "lit-lib",
   "private": true,
+  "description": "Some custom webcomponents",
   "version": "0.0.0",
   "type": "module",
+  "main": "./dist/index2.js",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

@@ -5,6 +5,10 @@
   "version": "0.0.0",
   "type": "module",
   "main": "./dist/index2.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vbdonadon/vbdonadon-wc-ddi"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
